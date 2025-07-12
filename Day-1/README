@@ -1,0 +1,123 @@
+# 📘 **Day 1: Caesar Cipher**
+
+## 🔐 What is Caesar Cipher Technique?
+
+- 🏛️ The **Caesar Cipher** is one of the **earliest and simplest encryption techniques**, named after **Julius Caesar**, who used it to send secret messages to his allies.
+- 🔁 It works by **shifting letters** in plaintext by a fixed number of positions, known as the **"Shift"** or **"Key"**.
+- 🔡 Each letter in the text is replaced by another letter a fixed number of steps down the alphabet.
+    
+    → *Example*: with a shift of 1, `A → B`, `C → D`, ..., `Z → A`.
+    
+
+---
+
+## 📐 Cryptography Algorithm for Caesar Cipher
+
+- To encrypt a text, you need an **integer value (shift)**, which determines how many positions each character is shifted.
+- The Caesar Cipher can be mathematically represented using **modular arithmetic** by converting letters to numbers:
+    - `A = 0`, `B = 1`, ..., `Z = 25`
+    - The encryption formula:
+        
+        `Encrypted letter = (original letter position + shift) % 26`
+        
+- 🔄 The alphabet wraps around — so after `Z`, it loops back to `A`.
+
+📊 **Example (Shift = 3)**:
+
+- `A → D`, `C → F`, `X → A`, etc.
+
+![image.png](attachment:914dd817-00a5-45ca-9341-13e68d025004:image.png)
+
+![image.png](attachment:5112e0c1-8ee4-49af-98df-553fe68e2e1a:image.png)
+
+![image.png](attachment:e299ef77-cd89-46a0-9740-a08e4ab73199:image.png)
+
+---
+
+## ✅ Advantages
+
+- 🛠️ Easy to implement and understand — ideal for beginners.
+- 🔄 Can be implemented physically (e.g. **Scytale**: a rotating disk or rod).
+- 🔐 Requires only a small set of shared information (key).
+- 🔧 Can be extended with multi-shift keys or keywords for more complexity.
+
+---
+
+## ❌ Disadvantages
+
+- 🔓 **Not secure** against modern decryption methods.
+- 🕵️ Vulnerable to **known-plaintext attacks**.
+- 🧮 Only **26 possible keys** → easily cracked via **brute-force**.
+- 🧾 Not suitable for encrypting long or sensitive messages.
+- 🚫 Does **not provide** confidentiality, integrity, or authenticity.
+
+---
+
+## 🧩 Features of Caesar Cipher
+
+1. 🧬 **Substitution cipher** – replaces each letter with another.
+2. 🔑 **Fixed key** – both sender & receiver must know the shift value.
+3. 🔁 **Symmetric encryption** – same key is used for both encryption and decryption.
+4. 🎯 **Limited keyspace** – only 26 possible shift values.
+5. 🔓 **Vulnerable to brute-force** attacks.
+6. 📏 **Simple to implement** – only requires basic arithmetic.
+
+---
+
+## 📏 Rules for Caesar Cipher
+
+1. Choose a shift value between **1 and 25**.
+2. Write down the alphabet in order `A → Z`.
+3. Shift each letter of the alphabet by the shift value.
+4. Replace each letter in your message with the shifted letter.
+    - *Example*: "hello" with shift `3` becomes `"khoor"`.
+5. To decrypt, shift back each letter by the same value.
+
+---
+
+## 🧮 Algorithm (Encryption)
+
+**Input:**
+
+1. A plaintext message.
+2. A shift value (1 to 25).
+
+**Steps:**
+
+1. Write the alphabet: `A B C ... Z`
+2. Shift it to create a new alphabet:
+    - *Example (shift = 3)*
+        
+        Original: `A B C D E ... X Y Z`
+        
+        Shifted: `D E F G H ... A B C`
+        
+3. For each letter in the message:
+    - Replace it with the corresponding letter in the shifted alphabet.
+4. To decrypt: do the same process in reverse.
+
+---
+
+## 🧠 Procedure & Complexity
+
+- 🔁 Traverse the input text character-by-character.
+- 🔄 Apply the shift (encryption or decryption).
+- 🧵 Return the resulting string.
+
+**Time Complexity:** `O(N)`
+
+**Auxiliary Space:** `O(N)`
+
+(*Where N = length of the input text*)
+
+---
+
+## 🧾 Conclusion
+
+> The Caesar Cipher, though simple, is an important milestone in the history of cryptography.
+> 
+> 
+> It introduces fundamental concepts like key-based encryption and substitution, paving the way for more advanced techniques.
+> 
+
+While it's **not secure** by modern standards, understanding it helps build a solid foundation in **cryptographic thinking** — from **classical ciphers** to today's **digital encryption algorithms**.
