@@ -1,6 +1,3 @@
-# Create the README.md file with the formatted Caesar Cipher content
-
-markdown_content = """
 # 📘 Day 1: Caesar Cipher
 
 ## 🔐 What is Caesar Cipher Technique?
